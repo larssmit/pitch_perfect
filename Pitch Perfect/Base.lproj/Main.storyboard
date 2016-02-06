@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9060" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Pitch_Perfect" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -15,11 +16,87 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Recording" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oyM-fu-aU9">
+                                <rect key="frame" x="0.0" y="0.0" width="83" height="21"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="16"/>
+                                <color key="textColor" red="0.14509803921568626" green="0.28235294117647058" blue="0.43137254901960786" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pqd-iL-9Uf">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <state key="normal" image="stopButton"/>
+                                <connections>
+                                    <action selector="stopButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="CoA-F8-0KZ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qAi-xa-Kql">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <state key="normal" image="microphone"/>
+                                <connections>
+                                    <action selector="recordAudio:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7Zu-Sv-BuS"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" red="0.0" green="0.61949454697986583" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="oyM-fu-aU9" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="166-wY-O9D"/>
+                            <constraint firstItem="qAi-xa-Kql" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="BEJ-sr-v4C"/>
+                            <constraint firstItem="qAi-xa-Kql" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="BKt-4l-7Bw"/>
+                            <constraint firstItem="oyM-fu-aU9" firstAttribute="top" secondItem="qAi-xa-Kql" secondAttribute="bottom" constant="37" id="ePj-8g-oRS"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="pqd-iL-9Uf" secondAttribute="bottom" constant="105" id="mrX-iB-ri4"/>
+                            <constraint firstItem="pqd-iL-9Uf" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="z8t-mt-Ab6"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="oyM-fu-aU9"/>
+                                <exclude reference="pqd-iL-9Uf"/>
+                                <exclude reference="qAi-xa-Kql"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="mrX-iB-ri4"/>
+                                <exclude reference="166-wY-O9D"/>
+                                <exclude reference="ePj-8g-oRS"/>
+                                <exclude reference="z8t-mt-Ab6"/>
+                                <exclude reference="BEJ-sr-v4C"/>
+                                <exclude reference="BKt-4l-7Bw"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="oyM-fu-aU9"/>
+                                <include reference="pqd-iL-9Uf"/>
+                                <include reference="qAi-xa-Kql"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="mrX-iB-ri4"/>
+                                <include reference="166-wY-O9D"/>
+                                <include reference="ePj-8g-oRS"/>
+                                <include reference="z8t-mt-Ab6"/>
+                                <include reference="BEJ-sr-v4C"/>
+                                <include reference="BKt-4l-7Bw"/>
+                            </mask>
+                        </variation>
                     </view>
+                    <connections>
+                        <outlet property="recordButton" destination="qAi-xa-Kql" id="aHN-v5-IsE"/>
+                        <outlet property="recordingLabel" destination="oyM-fu-aU9" id="JXf-ZZ-4V4"/>
+                        <outlet property="stopButton" destination="pqd-iL-9Uf" id="CKz-og-jRK"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="562.5" y="337"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="microphone" width="100" height="100"/>
+        <image name="stopButton" width="50" height="49"/>
+    </resources>
 </document>
