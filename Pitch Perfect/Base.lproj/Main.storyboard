@@ -155,9 +155,6 @@
                                 <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="16"/>
                                 <color key="textColor" red="0.1450980392" green="0.28235294119999998" blue="0.43137254899999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
-                                <variation key="widthClass=compact" misplaced="YES">
-                                    <rect key="frame" x="152" y="387" width="98" height="21"/>
-                                </variation>
                             </label>
                         </subviews>
                         <color key="backgroundColor" red="0.40000000600000002" green="0.80000001190000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -179,14 +176,14 @@
                                 <exclude reference="R09-u8-ke8"/>
                             </mask>
                             <mask key="constraints">
+                                <exclude reference="mrX-iB-ri4"/>
+                                <exclude reference="166-wY-O9D"/>
+                                <exclude reference="ePj-8g-oRS"/>
+                                <exclude reference="z8t-mt-Ab6"/>
                                 <exclude reference="BEJ-sr-v4C"/>
                                 <exclude reference="BKt-4l-7Bw"/>
                                 <exclude reference="1tD-na-ZUW"/>
                                 <exclude reference="OzN-hv-7KP"/>
-                                <exclude reference="166-wY-O9D"/>
-                                <exclude reference="ePj-8g-oRS"/>
-                                <exclude reference="z8t-mt-Ab6"/>
-                                <exclude reference="mrX-iB-ri4"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -197,14 +194,14 @@
                                 <include reference="R09-u8-ke8"/>
                             </mask>
                             <mask key="constraints">
+                                <include reference="mrX-iB-ri4"/>
+                                <include reference="166-wY-O9D"/>
+                                <include reference="ePj-8g-oRS"/>
+                                <include reference="z8t-mt-Ab6"/>
                                 <include reference="BEJ-sr-v4C"/>
                                 <include reference="BKt-4l-7Bw"/>
                                 <include reference="1tD-na-ZUW"/>
                                 <include reference="OzN-hv-7KP"/>
-                                <include reference="166-wY-O9D"/>
-                                <include reference="ePj-8g-oRS"/>
-                                <include reference="z8t-mt-Ab6"/>
-                                <include reference="mrX-iB-ri4"/>
                             </mask>
                         </variation>
                     </view>
