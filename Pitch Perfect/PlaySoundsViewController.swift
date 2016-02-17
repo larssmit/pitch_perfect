@@ -50,6 +50,7 @@ class PlaySoundsViewController: UIViewController {
     }
     
     func audioEngineStopReset() {
+        audioPlayer.stop()
         audioEngine.stop()
         audioEngine.reset()
     }
@@ -63,7 +64,6 @@ class PlaySoundsViewController: UIViewController {
     }
     
     func playAudioWithVariablePitch(pitch: Float) {
-        audioPlayer.stop()
         audioEngineStopReset()
         
         let audioPlayerNode = AVAudioPlayerNode()
